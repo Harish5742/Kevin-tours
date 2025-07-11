@@ -42,7 +42,7 @@ const HomePage = () => {
 
   const topPackages = [
     {
-      id: 'ooty-package',
+      id: 'ooty',
       name: "Ooty Hill Station Special",
       image: "https://images.unsplash.com/photo-1469474968028-56623f02e42e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       description: "Explore the Queen of Hill Stations with its gardens and lakes",
