@@ -1,0 +1,168 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Greenish nature-inspired Ooty color palette */
+@layer base {
+  :root {
+    --background: 120 20% 98%;
+    --foreground: 120 25% 10%;
+
+    --card: 120 20% 98%;
+    --card-foreground: 120 25% 10%;
+
+    --popover: 120 20% 98%;
+    --popover-foreground: 120 25% 10%;
+
+    --primary: 120 60% 20%;
+    --primary-foreground: 120 20% 95%;
+
+    --secondary: 120 30% 88%;
+    --secondary-foreground: 120 25% 15%;
+
+    --muted: 120 20% 85%;
+    --muted-foreground: 120 15% 40%;
+
+    --accent: 120 30% 80%;
+    --accent-foreground: 120 25% 15%;
+
+    --destructive: 0 65% 51%;
+    --destructive-foreground: 120 20% 95%;
+
+    --border: 120 20% 80%;
+    --input: 120 20% 80%;
+    --ring: 120 60% 20%;
+
+    --radius: 0.5rem;
+
+    /* Nature theme colors - Greenish palette */
+    --forest-green: 120 60% 20%;
+    --sage-green: 120 40% 50%;
+    --light-green: 120 50% 70%;
+    --warm-cream: 120 30% 95%;
+    --mist-gray: 120 15% 85%;
+    --mountain-blue: 210 30% 40%;
+  }
+
+  .dark {
+    --background: 120 25% 8%;
+    --foreground: 120 20% 95%;
+
+    --card: 120 25% 8%;
+    --card-foreground: 120 20% 95%;
+
+    --popover: 120 25% 8%;
+    --popover-foreground: 120 20% 95%;
+
+    --primary: 120 50% 60%;
+    --primary-foreground: 120 25% 10%;
+
+    --secondary: 120 20% 15%;
+    --secondary-foreground: 120 20% 95%;
+
+    --muted: 120 20% 15%;
+    --muted-foreground: 120 15% 65%;
+
+    --accent: 120 20% 20%;
+    --accent-foreground: 120 20% 95%;
+
+    --destructive: 0 65% 51%;
+    --destructive-foreground: 120 20% 95%;
+
+    --border: 120 20% 20%;
+    --input: 120 20% 20%;
+    --ring: 120 50% 60%;
+
+    /* Dark theme nature colors */
+    --forest-green: 120 50% 60%;
+    --sage-green: 120 40% 70%;
+    --light-green: 120 50% 80%;
+    --warm-cream: 120 25% 15%;
+    --mist-gray: 120 15% 25%;
+    --mountain-blue: 210 30% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-light transition-colors duration-300;
+  }
+}
+
+/* Subtle, nature-inspired animations */
+@layer utilities {
+  .animate-gentle-fade {
+    animation: gentleFade 0.8s ease-out forwards;
+    opacity: 0;
+  }
+  
+  .animate-soft-rise {
+    animation: softRise 0.6s ease-out forwards;
+    transform: translateY(20px);
+    opacity: 0;
+  }
+}
+
+@keyframes gentleFade {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes softRise {
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Smooth, professional scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Nature-themed scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: hsl(var(--muted));
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--forest-green));
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--sage-green));
+}
+
+/* Custom nature-inspired utility classes */
+@layer utilities {
+  .nature-gradient {
+    background: linear-gradient(135deg, hsl(var(--forest-green)), hsl(var(--sage-green)));
+  }
+  
+  .green-gradient {
+    background: linear-gradient(135deg, hsl(var(--forest-green)), hsl(var(--light-green)));
+  }
+  
+  .mist-overlay {
+    background: linear-gradient(to bottom, transparent, hsl(var(--mist-gray) / 0.3));
+  }
+  
+  .nature-shadow {
+    box-shadow: 0 4px 20px hsl(var(--forest-green) / 0.15);
+  }
+  
+  .soft-shadow {
+    box-shadow: 0 2px 12px hsl(var(--mist-gray) / 0.3);
+  }
+}
